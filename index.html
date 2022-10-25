@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRCM - Creative Result Card Maker</title>
+    <link rel="shortcut icon" href="img/CRCM_favicon.png" type="image/x-icon">
+    <!-- Google Fonts=================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Fontawesome CDN============================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Custom CSS============================ -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Wrapper Start======================= -->
+    <div class="wrapper">
+        <!-- Basic Info start=================================== -->
+        <h2>Basic Info</h2>
+        <form class="inputWrapper basicInfo">
+            <div class="progileImgWrapper">
+                <div class="profileImgBox">
+                    <img src="img/profile.png" alt="">
+                </div>
+                <input type="file" id="uploadProImg" accept="image/*">
+                <label for="uploadProImg" class="uploadImgBtn"><i class="fa-solid fa-camera"></i> Upload Image</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="useName" id="useName" required>
+                <label>Your Name</label>
+            </div>
+            
+            <div class="inputRow">
+                <div class="inputBox">
+                    <input type="text" name="uniName" id="uniName" required>
+                    <label>University Name</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="semesterNo" id="semesterNo" required>
+                    <label>Semester No.</label>
+                </div>
+            </div>
+            <div class="inputRow">
+                <div class="inputBox">
+                    <input type="text" name="dept" id="dept" required>
+                    <label>Department</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="session" id="session" required>
+                    <label>Session</label>
+                </div>
+            </div>
+            <div class="inputRow">
+                <div class="inputBox">
+                    <input type="text" name="regID" id="regID" required>
+                    <label>Reg. ID</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="phone" id="phone" required>
+                    <label>Phone No.</label>
+                </div>
+            </div>
+            <button class="basicInfoBtn btnHide">ok</button>
+        </form>
+        <!-- Basic Info end=================================== -->
+
+        <!-- CGPA info start=================================== -->
+        <h2 class="cgpaCalc">CGPA Calculator</h2>
+        <form class="inputWrapper cgpaCalc">
+            <div class="inputBox">
+                <input type="text" name="subName" id="subName" required>
+                <label>Subject Name</label>
+            </div>
+            <div class="inputRow">
+                <div class="inputBox">
+                    <input type="text" name="cgpa" id="cgpa" required>
+                    <label>CGPA</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="credit" id="credit" required>
+                    <label>Subject Credit</label>
+                </div>
+            </div>
+            <button class="addBtn">add</button>
+        </form>
+        <!-- CGPA info end=================================== -->
+
+        <!-- CGPA subject details start=================================== -->
+        <h2>Your all Course Details</h2>
+        <div class="subjectDetails">
+            <div class="details">
+                <p class="subNameDis">Subject Name</p>
+                <p>CGPA</p>
+                <p>Subject Credit</p>
+                <p>Grade</p>
+            </div>
+        </div>
+        <!-- CGPA subject details end=================================== -->
+
+        <!-- total Point showoff start=================================== -->
+        <div class="yourPoint">
+            <!-- <h2>your poin 4</h2>
+                <h2>A+</h2> -->
+        </div>
+        <button class="countCgpa btnHide">Count CGPA</button>
+        <!-- total Point showoff end=================================== -->
+    </div>
+    <!-- Wrapper End======================= -->
+
+    <!-- Result Show popup start============================== -->
+    <div class="popUp">
+        <div class="popUInner">
+            <div class="result">
+                <!-- <h3 class="popUpCgpa"></h3>
+                            <h2 class="popUpGrade"></h2> -->
+            </div>
+            <button class="screenShotOpen">Take A Screenshot </button>
+            <button class="close">Close</button>
+        </div>
+    </div>
+    <!-- Result Show popup end============================== -->
+
+
+    <!-- ScreenShot start============================== -->
+    <div class="screenShotImgWrapper">
+        <div class="screenShotImg">
+            <div class="imgWrapper">
+
+            </div>
+            <a class="imgDownload" download="Result Sheet">
+                <button>Download</button>
+            </a>
+            <button class="imgClose">Close</button>
+        </div>
+    </div>
+    <!-- ScreenShot end============================== -->
+
+    <!-- welcomePage start======================== -->
+    <div class="welcomePage">
+        <div class="content">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="CRCM Logo">
+            </a>
+            <h1>Welcome to CRCM</h1>
+            <p>This is a result card maker works with CGPA and grade. You can use it to make your total semester or final result with a beautiful UI</p>
+            <button class="openWelcome">Open App</button>
+        </div>
+        <div class="cover"></div>
+    </div>
+    <!-- welcomePage end======================== -->
+
+
+    <!-- To taking screen shot============================ -->
+    <!-- Html 2 Canvas Library============================ -->
+    <script src="js/html2canvas.min.js"></script>
+    <!-- All Common / MAIN JS ============================ -->
+    <script src="js/app.js"></script>
+    <!-- For basic information============================ -->
+    <script src="js/basicInfo.js"></script>
+    <!-- For Image Upload functionality============================ -->
+    <script src="js/imageUpload.js"></script>
+    <!-- For Screenshot functionality============================ -->
+    <script src="js/takeScreenShot.js"></script>
+    <!-- For Welcome Page functionality============================ -->
+    <script src="js/welcomePage.js"></script>
+    <!-- welcomePage functionality============================ -->
+    <script src="js/themeColorChange.js"></script>
+</body>
+</html>
